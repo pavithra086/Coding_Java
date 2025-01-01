@@ -1,0 +1,21 @@
+
+//sum of two numbers
+import java.util.*;
+public class Main {
+      public double calsum(int a,double b){
+        double c= a+b;
+        return (c);
+       
+}
+    public static void main(String[] args) {
+       
+       Scanner sc=new Scanner(System.in);
+       int a=sc.nextInt();
+        double b=sc.nextDouble();
+        Main s=new Main();
+     double h=  s.calsum(a,b);
+      System.out.println(h);
+       
+    }
+}
+   

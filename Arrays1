@@ -1,0 +1,38 @@
+package com.practice.javacodes;
+
+import java.util.Scanner;
+
+public class arraypractic2 {
+    public static void main(String args[]) {
+        System.out.println("enter the size of the array");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int[] arr1 = new int[n];
+        System.out.println("eem");
+        for(int i=0;i<n;i++)
+        {
+            arr[i] =sc.nextInt();
+        }
+        int stpoint =0;
+        int endpoint=n-1;
+        System.out.println("-----");
+        for(int j=0;j<arr.length/2;j++)
+        {
+          int temp=arr[stpoint];
+          arr[stpoint]=arr[endpoint];
+          arr[endpoint]=temp;
+          stpoint++;
+          endpoint--;
+
+        }
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+
+
+
+
+    }
+
+}

@@ -1,0 +1,33 @@
+In Java, the DoubleBuffer limit refers to the maximum number of elements that can be read or written in the buffer. A DoubleBuffer is a part of the java.nio package and is used for working with sequences of double values.
+
+Key Methods for Limit:
+limit(): Returns the current limit of the buffer. The limit specifies the number of elements the buffer can access or modify from the current position.
+limit(int newLimit): Sets the limit of the buffer and returns the buffer itself. If the limit is set lower than the current position, the position is adjusted to the new limit.
+
+
+package com.practice.javacodes;
+
+import java.nio.DoubleBuffer;
+
+
+    class DoubleBufferExample {
+        public static void main(String[] args) {
+            DoubleBuffer buffer = DoubleBuffer.allocate(10);  // Creates a buffer with capacity 10
+
+            buffer.put(1.1);
+            buffer.put(2.2);
+            buffer.put(3.3);
+
+            System.out.println("Capacity: " + buffer.capacity()); // Output: 10
+            System.out.println("Limit: " + buffer.limit());       // Output: 10 (default limit equals capacity)
+
+            buffer.limit(5);  // Setting a new limit
+            System.out.println("New Limit: " + buffer.limit());   // Output: 5
+
+            buffer.flip();  // Prepares buffer for reading
+            while (buffer.hasRemaining()) {
+                System.out.println(buffer.get());
+            }
+        }
+    }
+

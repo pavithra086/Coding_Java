@@ -1,0 +1,18 @@
+package com.practice.javacodes;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.SplittableRandom;
+import java.util.stream.Collectors;
+
+public class streamapipractice {
+    public static void main(String[] args) {
+        String str= "pavithra is a good girl , pavithra is a good girl";
+        Map<Character,Long> nh= str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(c->c,Collectors.counting()));
+        System.out.println(nh)
+        ;
+        Map<String,Long> h= Arrays.stream(str.split("\\s+")).collect(Collectors.groupingBy(w->w,Collectors.counting()));
+        System.out.println(h);
+    }
+    }
+

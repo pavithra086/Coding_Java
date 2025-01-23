@@ -1,3 +1,5 @@
+
+
 package com.practice.javacodes.collections;
 
 public class collectionsmain_class {

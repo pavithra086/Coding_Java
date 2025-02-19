@@ -7,18 +7,14 @@ public class sum_of_odd {
     }
 
     public static int sumofodd()
-    {   int i=2; int ll=1; int hl=7;int sum=1;int num=i;
-        while(i<=hl )
-        {
+    {   int i=1; int ll=1; int hl=5;int sum=0;int num=i;
 
             while( i%2!=0 && i<=hl ){
                 sum=sum+i;
-                i++;
-
-
+                i=i+2;
         }
-           i++;
-        }
+
         return sum;
+
     }
 }

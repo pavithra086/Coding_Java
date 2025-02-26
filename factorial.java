@@ -1,21 +1,13 @@
-package org.example.challenge1;
+package org.example.happy_practice;
 
 public class factorial {
-    //3*2*1
     public static void main(String[] args) {
-        int fact= factorial();
-        System.out.println(fact);
-    }
-    public static int factorial()
-    {
-        int num =3; int fact=1;int i=1;
-        while(i<=num)
+        int fac=9; int fact =1;
+        for(int i =1; i<=fac;i++)
         {
             fact =fact*i;
-            i++;
-
         }
+        System.out.println(fact);
 
-        return fact;
     }
 }

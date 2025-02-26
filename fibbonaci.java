@@ -1,24 +1,16 @@
-package org.example.challenge1;
+package org.example.happy_practice;
 
 public class fibbonaci {
     public static void main(String[] args) {
-    int res= fibbo();
-    }
-    public static int fibbo()
-    {
-       int num1=0;int num2=1;int num3=0;int limit =200;
-       while(num1+num2<limit )
-       {
-           num3=num2+num1;
-
-           num1=num2;
-           num2=num3;
-
-               System.out.println(num3);
-
-
-
-       }
-       return 0;
+        int i=0; int j=1;int res=0;
+        System.out.println(i);
+        System.out.println(j);
+        for(int k=0;res<15;k++)
+        {
+            res=i+j;
+            System.out.println(res);
+            i=j;
+            j=res;
+        }
     }
 }
